@@ -21,15 +21,18 @@ typedef struct ELE {
      */
     char *value;
     struct ELE *next;
+    struct ELE *pre;
 } list_ele_t;
 
 /* Queue structure */
 typedef struct {
     list_ele_t *head; /* Linked list of elements */
+    list_ele_t *tail;
     /* TODO: You will need to add more fields to this structure
      *        to efficiently implement q_size and q_insert_tail.
      */
     /* TODO: Remove the above comment when you are about to implement. */
+    int size;
 } queue_t;
 
 /* Operations on queue */
